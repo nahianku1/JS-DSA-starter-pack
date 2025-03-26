@@ -1,4 +1,4 @@
-import readline from "readline";
+const readline = require("readline");
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -12,7 +12,6 @@ rl.on("line", (line) => {
   let [N, Q] = input[0].split(" ").map(Number);
   let A = input[1].split(" ").map(Number);
   let queries = input.slice(2).map(Number);
-
   let result = queries.map((X) => (A.includes(X) ? "found" : "not found"));
   console.log(result.join("\n"));
 });
